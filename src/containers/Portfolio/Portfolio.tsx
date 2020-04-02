@@ -113,7 +113,12 @@ class Portfolio extends Component<PortfolioProps,{}>{
                 title: 'The Outpost',
                 subtitle: 'A fresh start',
                 backdrop: outpostImg,
-                content: <Outpost links={[]} />,
+                content: <Outpost links={[
+                    <LinkButton
+                        title='Github'
+                        url='https://github.com/astranomaly/the-outpost'
+                        icon={Icons.github} />,
+                ]} />,
                 stack: toolsets.outpost,
                 imgAtr: 'Image C/O NASA'
             },
