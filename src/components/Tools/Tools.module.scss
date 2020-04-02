@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.Tools{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+
+    @media only screen and (min-width: 32rem) and (max-width: 59rem){
+        width: 29.5rem;
+    }
+
+    li{
+        margin: 0.5rem;
+        height: 2.5rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    svg{
+        height: 100%;
+    }
+    span{
+        color: $white-color;
+        padding-left: 0.5rem;
+        font-size: $base-font-size - 0.3;
+    }
+}

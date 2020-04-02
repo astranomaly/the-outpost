@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+
+.InfoBlock{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @media #{$card-2-column}{
+        grid-template-columns: 10rem auto;
+
+        .TitleBox{
+            justify-self: flex-end;
+        }
+    }
+
+    p,h3{
+        margin: 0;
+    }
+
+    h3{
+        text-align: right;
+    }
+
+    p{
+        padding-left: 1.5rem;
+        position: relative;
+        line-height: 2.1rem;
+        width: auto;
+    }
+
+    p::before{
+        content: '‣';
+        left: 0;
+        position: absolute;
+    }
+}
+
+.InfoBox{
+    margin-bottom: 2rem;
+}

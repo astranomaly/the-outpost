@@ -1,0 +1,8 @@
+const Actions = {
+    PAGE_CHANGE : 'PAGE_CHANGE',
+    UPDATE_PAGE_DATA : 'UPDATE_PAGE_DATA',
+    UPDATE_NAV_LIST : 'UPDATE_NAV_LIST',
+    UPDATE_NAV_LOCATION : 'UPDATE_NAV_LOCATION',
+}
+
+export default Actions;

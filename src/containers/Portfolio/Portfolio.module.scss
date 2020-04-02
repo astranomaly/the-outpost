@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.PortfolioPage{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(23,0,47,1) 0%,rgba(19,41,89,0) 25%,rgba(5,171,224,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17002f', endColorstr='#0005abe0',GradientType=0 ); /* IE6-9 */
+    padding-top: $small-gap;
+
+    h3{
+        margin: $med-gap auto $med-gap auto;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        @media only screen and (min-width: 500px){
+            flex-flow: row wrap;
+
+            li{
+                margin: 0.5rem;
+            }
+            a{
+                margin: 0 auto;
+            }
+        }
+    }
+
+    li{
+        margin: 0.5rem 0;
+    }
+}

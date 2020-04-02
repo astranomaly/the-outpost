@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.AppContent{
+    flex: 1 1 auto;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & > section,
+    & > main{
+        flex: 1 0 auto;
+        max-width: 70rem;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-bottom: $med-gap;
+
+        @media #{$card-2-column}{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        @media only screen and (min-width:80rem){
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
+    .Portfolio{
+        max-width: 100rem;
+    }
+}

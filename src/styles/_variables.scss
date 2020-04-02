@@ -1,0 +1,32 @@
+// Specific Colors
+$light-purple: hsl(290,50,60);
+$light-blue: hsl(222,100,75);
+$med-purple: hsl(260,50,60);
+$dark-purple: hsl(290,100,8);
+$dark-blue: hsl(260,100,10);
+// Generic Colors
+$main-color: hsl(42,100,75);
+$white-color: hsl(42,100,90);
+$grey-color: hsl(42,2,50);
+$black-color: hsl(290,14,10);
+// Accents
+$main-gradient: linear-gradient(to bottom, $dark-blue 0%, $dark-purple 100%);
+$card-shadow: 0 2px 5px rgba(0,0,0,0.3);
+$lift-shadow: 0 4px 5px rgba(0,0,0,0.4);
+// Sizes
+$base-font-size: 1.7rem;
+$card-small-text: 1em;
+$card-radius: 0.175rem;
+$small-gap: $base-font-size * 1.5;
+$big-gap: $base-font-size * 4.5;
+$med-gap: $big-gap - $small-gap;
+$nav-size: 7rem;
+$min-touch-size: 2.75rem;
+// Animation
+$basic-transition: all 0.1s ease-in;
+$anim-jump-height: 0.2rem;
+// Breakpoints
+$landscape: "only screen and (orientation:landscape)";
+$portrait: "only screen and (orientation:portrait)";
+$card-2-column: 'only screen and (min-width: 43rem)';
+$card-3-column: 'only screen and (min-width: 75rem)';

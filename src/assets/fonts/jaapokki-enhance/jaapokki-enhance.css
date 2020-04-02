@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Jaapokki Enhance';
+  src: url(./jaapokki-enhance.eot);
+  src: local('Jaapokki enchance'),
+  url(./jaapokki-enhance.eot?#iefix) format('embedded-opentype'),
+  url(./jaapokki-enhance.woff) format('woff'),
+  url(./jaapokki-enhance.ttf) format('truetype'),
+  url(./jaapokki-enhance.svg#svgJaapokkiEnhance) format('svg');
+}

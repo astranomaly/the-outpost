@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+$footer-breakpoint: 'only screen and (min-width: 70rem)';
+
+.Footer{
+    border-top: 1px solid $light-purple;
+    border-color: hsla(290,50,60,0.3);
+    padding: 2.5rem 0.6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    @media #{$footer-breakpoint}{
+        flex-flow: row nowrap;
+        padding: 2.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+        color: $light-purple;
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        @media #{$footer-breakpoint}{
+            padding-bottom: 0;
+            padding-right: 1rem;
+        }
+    }
+    blockquote{
+        margin: 0;
+        padding-top: 1rem;
+        color: $grey-color;
+        font-style: italic;
+        background: linear-gradient(to right, transparent 20%, $grey-color 20%, $grey-color 80%, transparent 80%) 0 0 / 100% 2px no-repeat;
+
+        @media #{$footer-breakpoint}{
+            padding-top: 0;
+            padding-left: 1rem;
+            background: linear-gradient(to bottom, transparent 5%, $grey-color 5%, $grey-color 95%, transparent 95%) 0 0 / 3px 100% no-repeat;
+        }
+
+        @media only screen and (max-width:32.5rem){
+            max-width: 20rem;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import './variables';
+
+.App{
+    /* display: flex;
+    flex-flow: column nowrap;
+    height: 100vh; */
+
+    h2{
+        font-family: 'Jaapokki Enhance';
+        text-transform: uppercase;
+        font-size: 4rem;
+        color: $main-color;
+        text-align: center;
+        padding: $small-gap 0 $big-gap 0;
+        margin: 0;
+    }
+    h3{
+        color: $main-color;
+        text-align: center;
+        font-size: $base-font-size;
+        font-style: italic;
+        font-weight: unset;
+        border-bottom: 3px double;
+        line-height: $base-font-size - 0.3;
+        display: inline-block;
+    }
+
+    /* @media only screen and (orientation:landscape){
+        flex-flow: row nowrap;
+    } */
+}

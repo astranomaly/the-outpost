@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.LinkButton{
+    color: $light-blue;
+    background: hsla(222,100,75,0.2);
+    padding: 1rem 3rem;
+    border: 2px solid $light-blue;
+    text-decoration: none;
+    display: block;
+    border-radius: 0.2rem;
+    font-size: $base-font-size;
+    position: relative;
+
+    &:hover,
+    &:focus{
+        background: hsla(222,100,75,0.3);
+    }
+    span{
+        position: relative;
+        bottom: 0.125rem;
+    }
+
+    svg{
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 0.5rem;
+    }
+}

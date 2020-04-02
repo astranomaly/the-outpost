@@ -1,0 +1,96 @@
+@import '../../styles/variables';
+
+$title-padding-v: 7vh;
+$title-padding-h: 3vw;
+$breakpoint: 55.5 + $nav-size;
+$row-height: 25vh;
+
+.Header{
+    display: flex;
+    flex: 1 0 100vh;
+    justify-content: center;
+    align-content: stretch;
+    height: 100vh;
+    /* For Safari */
+    background: url(../../assets/img/header.png) no-repeat top center;
+    /* For good browsers */
+    background: url(../../assets/img/header.webp) no-repeat top center;
+    background-blend-mode: hard-light;
+    background-size: contain;
+    background-origin: padding-box;
+    padding: 0 0 $nav-size 0;
+    margin-bottom: (0 - $nav-size);
+
+    @media #{$landscape}{
+        padding: 0;
+        margin-bottom: 0;
+    }
+    @media #{$landscape} and (min-aspect-ratio: 2480/1445){
+        background-position: center bottom;
+        background-size: cover;
+    }
+}
+
+.TextWrapper{
+    width: 100%;
+    max-width: 100rem;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    justify-content: center;
+
+    h1{
+        border-bottom: 0.7vw solid $main-color;
+        width: 85%;
+        margin: 0;
+        padding: 0 0 $title-padding-v 0;
+        align-self: end;
+    }
+
+    p{
+        margin: 0;
+        padding: $title-padding-v 0 0 0;
+    }
+
+    @media only screen and (min-width:$breakpoint){
+        grid-template-columns: 60% 40%;
+        grid-template-rows: repeat(1,min-content);
+        align-content: center;
+
+        h1,p{
+            align-self: center;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        h1{
+            justify-self: end;
+            border-bottom: 0;
+            padding: 0 $title-padding-h 0 ($title-padding-h * 2);
+        }
+        p{
+            text-align: left;
+            justify-self: start;
+            align-self: stretch;
+            border-left: 0.5rem solid $main-color;
+            padding: 0 ($title-padding-h * 2) 0 (calc( #{$title-padding-h} + 0.5rem ));
+            font-size: 2.6vw;
+            line-height: 2.5vw;
+        }
+    }
+
+    @media only screen and (min-width:112rem){
+        h1{
+            padding: 0 3rem 0 6rem;
+        }
+        p{
+            padding: 0 6rem 0 3rem;
+            font-size: 3rem;
+            line-height: 2.9rem;
+        }
+    }
+}

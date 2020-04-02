@@ -1,0 +1,84 @@
+@import "./variables";
+@import '~sanitize.css';
+
+html{
+    scroll-behavior: smooth;
+    padding-bottom: $nav-size;
+}
+
+header{
+    width: 100%;
+}
+
+body{
+    background: $dark-purple;
+    background: $main-gradient;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09001a', endColorstr='#110014', GradientType=0 );
+    background-attachment: fixed;
+    // overflow-y: hidden;
+}
+
+p{
+    font-size: $base-font-size;
+}
+
+span{
+    color: inherit;
+}
+
+a{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: $light-blue;
+    text-decoration-thickness: from-font;
+    text-decoration-skip: skip;
+    text-decoration-skip-ink: auto;
+    line-height: $base-font-size - 0.3;
+
+    &:hover,
+    &:focus{
+        color: mix($white-color,$light-blue,65%);
+    }
+}
+
+button {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+// Relies on the balance-text polyfill https://github.com/adobe/balance-text
+.balance-text{
+    text-wrap: balance;
+}
+
+.no-break{
+    white-space: nowrap;
+}
+
+.visually-hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+abbr.amp{
+    font-family: 'Playfair Display SC', Baskerville, Constantia, "Palatino Linotype","Trebuchet MS", 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+    color: inherit;
+    text-decoration: none;
+
+    h1 &,
+    h2 &{
+        font-weight: 800;
+    }
+}
