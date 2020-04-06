@@ -28,6 +28,8 @@ button{
     height: 100%;
     width: unset;
 
+    @media #{$reduce-motion}{transition: none;}
+
     svg{
         height: 50%;
         width: unset;

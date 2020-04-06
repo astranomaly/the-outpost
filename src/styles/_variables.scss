@@ -23,6 +23,7 @@ $med-gap: $big-gap - $small-gap;
 $nav-size: 7rem;
 $min-touch-size: 2.75rem;
 // Animation
+$reduce-motion: "(prefers-reduced-motion: reduce)";
 $basic-transition: all 0.1s ease-in;
 $anim-jump-height: 0.2rem;
 // Breakpoints

@@ -3,6 +3,8 @@
 .Card{
     transition: $basic-transition;
 
+    @media #{$reduce-motion}{transition: none;}
+
     &:hover{
         img,header{
             position: relative;
@@ -31,6 +33,7 @@
         box-shadow: $card-shadow;
         border-bottom-left-radius: $card-radius;
         border-bottom-right-radius: $card-radius;
+        @media #{$reduce-motion}{transition: none;}
     }
     p{
         display: flex;
@@ -63,4 +66,5 @@
     filter: contrast(0.8);
     border-top-right-radius: $card-radius;
     border-top-left-radius: $card-radius;
+    @media #{$reduce-motion}{transition: none;}
 }

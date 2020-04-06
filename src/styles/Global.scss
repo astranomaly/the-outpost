@@ -4,6 +4,7 @@
 html{
     scroll-behavior: smooth;
     padding-bottom: $nav-size;
+    @media #{$reduce-motion}{scroll-behavior: auto;}
 }
 
 header{
