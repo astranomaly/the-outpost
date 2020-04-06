@@ -35,7 +35,7 @@ class Home extends Component<HomeProps,{}>{
         this._portfolioRef = React.createRef();
         this._contactRef = React.createRef();
         // Set page title
-        document.title = 'The Outpost • Web development by Jon Reimer';
+        document.title = 'The Outpost \u2022 Web development by Jon Reimer';
     }
 
     componentDidMount(){
