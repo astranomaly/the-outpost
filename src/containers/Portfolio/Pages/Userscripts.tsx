@@ -4,9 +4,8 @@ import { connect, ConnectedProps } from 'react-redux';
 import Actions from '../../../store/actions';
 import { Link } from 'react-router-dom';
 import SectionBlock, {values} from '../../../components/UI/SectionBlock/SectionBlock';
-import LightboxBlock from '../../../components/UI/LightboxBlock/LightboxBlock';
+// import LightboxBlock from '../../../components/UI/LightboxBlock/LightboxBlock';
 import LinkBlock from '../../../components/UI/LinkBlock/LinkBlock';
-// Images
 
 type UserscriptsProps = PortfolioPage & ConnectedProps<typeof connector>;
 
