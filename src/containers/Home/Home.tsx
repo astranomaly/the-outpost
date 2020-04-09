@@ -33,7 +33,7 @@ class Home extends Component<HomeProps,HomeState>{
     _aboutRef:React.RefObject<any>;
     _portfolioRef:React.RefObject<any>;
     _contactRef:React.RefObject<any>;
-    _grURL: string = `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/5661481.xml?key=${process.env.REACT_APP_GR_API_KEY}&v=2&shelf=currently-reading`;
+    _grURL: string = `https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/5661481.xml?key=3UtcU5haOHagS71pQdTww&v=2&shelf=currently-reading`;
 
     state = {
         books: undefined,
