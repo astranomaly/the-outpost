@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Dispatch } from 'redux';
 import { connect, ConnectedProps } from 'react-redux';
 import Actions from '../../store/actions';
+import axios from 'axios';
 // Style
 import style from './Home.module.scss';
 // Components
@@ -15,6 +16,7 @@ import Card from '../../components/UI/Card/Card';
 import StandoutText from '../../components/UI/StandoutText/StandoutText';
 import Tools from '../../components/Tools/Tools';
 import Social from '../../components/Social/Social';
+import BookInfo from '../../components/BookInfo/BookInfo';
 // Images
 import bmsImg from '../../assets/img/portfolio/bms.webp';
 import graphicsImg from '../../assets/img/portfolio/graphics.webp';
@@ -23,12 +25,20 @@ import maxqImg from '../../assets/img/portfolio/maxq.webp';
 import outpostImg from '../../assets/img/portfolio/outpost.webp';
 import userscriptsImg from '../../assets/img/portfolio/userscripts.webp';
 
-
 type HomeProps = RouteComponentProps & ConnectedProps<typeof connector>;
-class Home extends Component<HomeProps,{}>{
+type HomeState = {
+    books: BookInfoType[]|undefined;
+};
+class Home extends Component<HomeProps,HomeState>{
     _aboutRef:React.RefObject<any>;
     _portfolioRef:React.RefObject<any>;
     _contactRef:React.RefObject<any>;
+    _grURL: string = `http://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/5661481.xml?key=${process.env.REACT_APP_GR_API_KEY}&v=2&shelf=currently-reading`;
+
+    state = {
+        books: undefined,
+    } as HomeState
+
     constructor(props:HomeProps){
         super(props);
         this._aboutRef = React.createRef();
@@ -38,6 +48,15 @@ class Home extends Component<HomeProps,{}>{
         document.title = 'The Outpost \u2022 Web development by Jon Reimer';
     }
 
+    parseXml = (xml:string) => {
+        if ( window.DOMParser ) {
+            const parser = new DOMParser();
+            return parser.parseFromString( xml, "text/xml" );
+        }else{
+            throw new Error('Window does not contain DOMParser');
+        }
+    }
+
     componentDidMount(){
         this.props.UPDATE_NAV_LIST( [
             this._aboutRef,
@@ -45,9 +64,53 @@ class Home extends Component<HomeProps,{}>{
             this._contactRef,
         ]);
         this.props.UPDATE_NAV_LOCATION(-1);
+        // Get Goodreads Info
+        axios({
+            method: "GET",
+            url: this._grURL,
+        }).then( p => {
+            // Make the XML useable
+            const data = this.parseXml(p.data);
+            const books = data.querySelectorAll( 'review' );
+            // For each book, extract the needed information
+            books.forEach(book => {
+                let title:string = book.querySelector('title_without_series')!.innerHTML;
+                let link: string = book.querySelector( 'link' )!.textContent!;
+                const authors = book.querySelectorAll('author');
+                let nameArr:string[] = [];
+                authors.forEach(author => {
+                    nameArr.push( author.querySelector( 'name' ) ? author.querySelector('name')!.innerHTML : 'Unknown');
+                });
+                // Copy the current state
+                let statePayload: HomeState = this.state.books ?
+                    { ...this.state } : {books: []};
+                // Push in the new info
+                statePayload.books!.push({
+                    title: title,
+                    link: link,
+                    authors: nameArr,
+                })
+                // Add the updated state
+                this.setState({
+                    ...this.state,
+                    books: statePayload.books,
+                });
+            });
+        } );
     }
 
     render(){
+        const readingSection = () => {
+            if(this.state.books){
+                return (
+                    <InfoBlock title='Reading'>
+                        <BookInfo data={this.state.books} />
+                    </InfoBlock>
+                )
+            }else{
+                return null;
+            }
+        }
         return ( <>
             <AppContent>
                 <Header />
@@ -61,11 +124,7 @@ class Home extends Component<HomeProps,{}>{
                             <p>A Typescript/React game.</p>
                             <p>Enhancements for this portfolio&nbsp;website.</p>
                         </></InfoBlock>
-                        <InfoBlock title='Reading'><>
-                            {/* TODO: replace this with GR API request */}
-                            <p>&ldquo;<a href="https://www.goodreads.com/book/show/77565">The Fall of Hyperion</a>&rdquo; <span className='no-break'>(Dan Simmons).</span></p>
-                            <p>&ldquo;<a href="https://www.goodreads.com/book/show/374233">If on a winter&rsquo;s night a traveller</a>&rdquo; <span className='no-break'>(Italo Calvino).</span></p>
-                        </></InfoBlock>
+                        {readingSection()}
                     </div>
                 </section>
                 <main ref={this._portfolioRef} className={style.Portfolio}>

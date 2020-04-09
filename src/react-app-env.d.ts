@@ -30,3 +30,9 @@ type PortfolioPageProps = {
     techRef:RefObject<any>;
     screensRef:RefObject<any>;
 }
+
+type BookInfoType = {
+    link: string;
+    title: string;
+    authors: string[];
+}
