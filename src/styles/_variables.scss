@@ -21,6 +21,7 @@ $small-gap: $base-font-size * 1.5;
 $big-gap: $base-font-size * 4.5;
 $med-gap: $big-gap - $small-gap;
 $nav-size: 7rem;
+$nav-size-reduced: $nav-size/1.5;
 $min-touch-size: 2.75rem;
 // Animation
 $reduce-motion: "(prefers-reduced-motion: reduce)";
@@ -31,3 +32,4 @@ $landscape: "only screen and (orientation:landscape)";
 $portrait: "only screen and (orientation:portrait)";
 $card-2-column: 'only screen and (min-width: 43rem)';
 $card-3-column: 'only screen and (min-width: 75rem)';
+$cramped-ceiling: 'only screen and (max-height: 25rem)';

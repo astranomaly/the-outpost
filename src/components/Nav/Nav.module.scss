@@ -19,6 +19,10 @@
     height: $nav-size;
     width: 100%;
     padding: 0.5rem;
+
+    @media #{$cramped-ceiling}{
+        height: $nav-size-reduced;
+    }
 }
 
 button{

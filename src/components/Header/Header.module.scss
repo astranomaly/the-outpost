@@ -21,6 +21,11 @@ $row-height: 25vh;
     padding: 0 0 $nav-size 0;
     margin-bottom: (0 - $nav-size);
 
+    @media #{$cramped-ceiling}{
+        padding: 0 0 $nav-size-reduced 0;
+        margin-bottom: (0 - $nav-size-reduced);
+    }
+
     @media #{$landscape} and (min-aspect-ratio: 2480/1445){
         background-position: center bottom;
         background-size: cover;

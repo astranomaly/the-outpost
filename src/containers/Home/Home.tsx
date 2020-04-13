@@ -228,6 +228,7 @@ export const toolsets = {
         'Affinity Designer',
         'TypeScript',
         'React',
+        'Netlify',
         'Goodreads API'
     ],
     userscripts: [
