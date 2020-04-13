@@ -15,6 +15,7 @@ const smallHeader: React.FC<SmallHeaderProps> = (props) => {
     };
     return (
         <header role='banner' className={style.SmallHeader} style={headerStyle}>
+            <a className='visually-hidden' href='/'>Go back to home page</a>
             <h2>{props.title}</h2>
             <p className='balance-text'>{props.subtitle}</p>
             {props.tools}

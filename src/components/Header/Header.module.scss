@@ -21,10 +21,6 @@ $row-height: 25vh;
     padding: 0 0 $nav-size 0;
     margin-bottom: (0 - $nav-size);
 
-    @media #{$landscape}{
-        padding: 0;
-        margin-bottom: 0;
-    }
     @media #{$landscape} and (min-aspect-ratio: 2480/1445){
         background-position: center bottom;
         background-size: cover;
