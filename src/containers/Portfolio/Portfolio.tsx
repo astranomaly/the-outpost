@@ -193,7 +193,7 @@ class Portfolio extends Component<PortfolioProps,{}>{
                             tools={stackArea}
                             img={this.props.pageInfo.backdrop}
                             atr={imgAtr} />
-                        <section className={style.PortfolioPage}>
+                        <section className={style.PortfolioPage} role='main'>
                             {this.props.pageInfo.content}
                         </section>
                         <Footer/>
