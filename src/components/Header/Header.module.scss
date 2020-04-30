@@ -11,15 +11,16 @@ $row-height: 25vh;
     justify-content: center;
     align-content: stretch;
     height: 100vh;
-    /* For Safari */
-    background: url(../../assets/img/header.png) no-repeat top center;
-    /* For good browsers */
-    background: url(../../assets/img/header.webp) no-repeat top center;
+    background-repeat: no-repeat;
+    background-position: top center;
     background-blend-mode: hard-light;
     background-size: contain;
     background-origin: padding-box;
     padding: 0 0 $nav-size 0;
     margin-bottom: (0 - $nav-size);
+    background-image: url(../../assets/img/header.webp);
+
+    :global(.no-webp) &{background-image: url(../../assets/img/header.png);}
 
     @media #{$cramped-ceiling}{
         padding: 0 0 $nav-size-reduced 0;

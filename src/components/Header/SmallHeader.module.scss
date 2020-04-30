@@ -66,4 +66,23 @@
             opacity: 0.7;
         }
     }
+
+    // WEBP & Fallback
+    &:global(.landman){background-image: $sh-gradient,url(../../assets/img/backdrop/landman.webp);}
+    :global(.no-webp) &:global(.landman){background-image: $sh-gradient,url(../../assets/img/backdrop/landman.webp);}
+
+    &:global(.maxq){background-image: $sh-gradient,url(../../assets/img/backdrop/maxq.webp);}
+    :global(.no-webp) &:global(.maxq){background-image: $sh-gradient,url(../../assets/img/backdrop/maxq.webp);}
+
+    &:global(.bms){background-image: $sh-gradient,url(../../assets/img/backdrop/bms.webp);}
+    :global(.no-webp) &:global(.bms){background-image: $sh-gradient,url(../../assets/img/backdrop/bms.webp);}
+
+    &:global(.outpost){background-image: $sh-gradient,url(../../assets/img/backdrop/outpost.webp);}
+    :global(.no-webp) &:global(.outpost){background-image: $sh-gradient,url(../../assets/img/backdrop/outpost.webp);}
+
+    &:global(.userscripts){background-image: $sh-gradient,url(../../assets/img/backdrop/userscripts.webp);}
+    :global(.no-webp) &:global(.userscripts){background-image: $sh-gradient,url(../../assets/img/backdrop/userscripts.webp);}
+
+    &:global(.graphics){background-image: $sh-gradient,url(../../assets/img/backdrop/graphics.webp);}
+    :global(.no-webp) &:global(.graphics){background-image: $sh-gradient,url(../../assets/img/backdrop/graphics.webp);}
 }

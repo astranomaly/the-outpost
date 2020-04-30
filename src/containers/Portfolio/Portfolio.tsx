@@ -17,13 +17,6 @@ import Landman from './Pages/Landman';
 import MaxQ from './Pages/MaxQ';
 import Outpost from './Pages/Outpost';
 import Userscripts from './Pages/Userscripts';
-// Images
-import landmanImg from '../../assets/img/backdrop/landman.webp';
-import maxqImg from '../../assets/img/backdrop/maxq.webp';
-import bmsImg from '../../assets/img/backdrop/bms.webp';
-import outpostImg from '../../assets/img/backdrop/outpost.webp';
-import graphicsImg from '../../assets/img/backdrop/graphics.webp';
-import userscriptsImg from '../../assets/img/backdrop/userscripts.webp';
 // Other
 import { toolsets } from '../Home/Home';
 
@@ -48,7 +41,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'bms': {
                 title: 'Blackie Mini Storage',
                 subtitle: 'A small, responsive website for a small, rural business',
-                backdrop: bmsImg,
                 content: <Bms links={[
                     <LinkButton
                         title='Live Site'
@@ -65,7 +57,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'graphics': {
                 title: 'Graphic Design',
                 subtitle: 'Modifying the physical world',
-                backdrop: graphicsImg,
                 content: <Graphics links={[
                     <LinkButton
                         title='ViaFoods'
@@ -81,7 +72,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'landman': {
                 title: 'Landman',
                 subtitle: 'A modern, mobile-responsive landing page',
-                backdrop: landmanImg,
                 content: <Landman links={[
                     <LinkButton
                         title='Live Site'
@@ -99,7 +89,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'maxq': {
                 title: 'Max Q Live',
                 subtitle: 'A tech ecosystem to change the world',
-                backdrop: maxqImg,
                 content: <MaxQ links={[
                     <LinkButton
                         title='Kerry McLuhan'
@@ -112,7 +101,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'outpost': {
                 title: 'The Outpost',
                 subtitle: 'A fresh start',
-                backdrop: outpostImg,
                 content: <Outpost links={[
                     <LinkButton
                         title='Github'
@@ -125,7 +113,6 @@ class Portfolio extends Component<PortfolioProps,{}>{
             'userscripts': {
                 title: 'Userscripts',
                 subtitle: 'Additional features and usability across the web',
-                backdrop: userscriptsImg,
                 content: <Userscripts links={[
                     <LinkButton
                         title='Userscript Builder'
@@ -190,8 +177,8 @@ class Portfolio extends Component<PortfolioProps,{}>{
                         <SmallHeader
                             title={this.props.pageInfo.title}
                             subtitle={this.props.pageInfo.subtitle}
+                            page={this._currentPage}
                             tools={stackArea}
-                            img={this.props.pageInfo.backdrop}
                             atr={imgAtr} />
                         <section className={style.PortfolioPage} role='main'>
                             {this.props.pageInfo.content}
