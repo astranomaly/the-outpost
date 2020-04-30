@@ -67,4 +67,23 @@
     border-top-right-radius: $card-radius;
     border-top-left-radius: $card-radius;
     @media #{$reduce-motion}{transition: none;}
+
+    // WEBP & Fallbacks
+    :global(.landman) &{background-image: url(../../../assets/img/portfolio/landman.webp);}
+    :global(.no-webp .landman) &{background-image: url(../../../assets/img/portfolio/landman.jpg);}
+
+    :global(.maxq) &{background-image: url(../../../assets/img/portfolio/maxq.webp);}
+    :global(.no-webp .maxq) &{background-image: url(../../../assets/img/portfolio/maxq.jpg);}
+
+    :global(.bms) &{background-image: url(../../../assets/img/portfolio/bms.webp);}
+    :global(.no-webp .bms) &{background-image: url(../../../assets/img/portfolio/bms.jpg);}
+
+    :global(.outpost) &{background-image: url(../../../assets/img/portfolio/outpost.webp);}
+    :global(.no-webp .outpost) &{background-image: url(../../../assets/img/portfolio/outpost.jpg);}
+
+    :global(.userscripts) &{background-image: url(../../../assets/img/portfolio/userscripts.webp);}
+    :global(.no-webp .userscripts) &{background-image: url(../../../assets/img/portfolio/userscripts.jpg);}
+
+    :global(.graphics) &{background-image: url(../../../assets/img/portfolio/graphics.webp);}
+    :global(.no-webp .graphics) &{background-image: url(../../../assets/img/portfolio/graphics.jpg);}
 }
