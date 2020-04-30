@@ -17,13 +17,6 @@ import StandoutText from '../../components/UI/StandoutText/StandoutText';
 import Tools from '../../components/Tools/Tools';
 import Social from '../../components/Social/Social';
 import BookInfo from '../../components/BookInfo/BookInfo';
-// Images
-import bmsImg from '../../assets/img/portfolio/bms.webp';
-import graphicsImg from '../../assets/img/portfolio/graphics.webp';
-import landmanImg from '../../assets/img/portfolio/landman.webp';
-import maxqImg from '../../assets/img/portfolio/maxq.webp';
-import outpostImg from '../../assets/img/portfolio/outpost.webp';
-import userscriptsImg from '../../assets/img/portfolio/userscripts.webp';
 
 type HomeProps = RouteComponentProps & ConnectedProps<typeof connector>;
 type HomeState = {
@@ -133,32 +126,26 @@ class Home extends Component<HomeProps,HomeState>{
                     <div className={style.CardContainer}>
                         <Card title="Landman"
                             slug='landman'
-                            image={landmanImg}
                             type="code"
                             tools={toolsets.landman} />
                         <Card title="Max Q Live"
                             slug='maxq'
-                            image={maxqImg}
                             type="server"
                             tools={toolsets.maxq} />
                         <Card title="Blackie Mini Storage"
                             slug='bms'
-                            image={bmsImg}
                             type="code"
                             tools={toolsets.bms} />
                         <Card title="The Outpost"
                             slug='outpost'
-                            image={outpostImg}
                             type="code"
                             tools={toolsets.outpost} />
                         <Card title="Userscripts"
                             slug='userscripts'
-                            image={userscriptsImg}
                             type="code"
                             tools={toolsets.userscripts} />
                         <Card title="Graphic Design"
                             slug='graphics'
-                            image={graphicsImg}
                             type="design"
                             tools={toolsets.graphics} />
                     </div>

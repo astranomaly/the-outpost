@@ -12,7 +12,6 @@ import { Dispatch } from 'redux';
 type CardProps = {
     title: string;
     slug: string;
-    image: string;
     type: 'code'|'server'|'design';
     tools: string[];
 }
@@ -29,19 +28,15 @@ class Card extends Component<CardProps & ConnectedProps<typeof connector>,{}>{
         }
         if ( this.props.type ) cases[ this.props.type ]();
 
-        const styleObj = {
-            backgroundImage: `url(${this.props.image})`,
-        }
-
         return (
-            <article className={style.Card}>
+            <article className={`${style.Card} ${this.props.slug}`}>
                 <Link to={{
                     pathname: `/p/${this.props.slug}`
                 }}
                 onClick={() => {
                     this.props.PAGE_CHANGE(this.props.slug)
                 }}>
-                    <div className={style.Thumb} style={styleObj} aria-hidden='true'></div>
+                    <div className={style.Thumb} aria-hidden='true'></div>
                 </Link>
                 <header>{this.props.title}</header>
                 <p>
