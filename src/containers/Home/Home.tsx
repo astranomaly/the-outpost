@@ -109,13 +109,12 @@ class Home extends Component<HomeProps,HomeState>{
                 <Header />
                 <section ref={this._aboutRef} className={style.About}>
                     <h2>Now</h2>
-                    <p>Hello, I'm Jon Reimer. I believe browsing the web should be an enjoyable&nbsp;<abbr className='amp' title='and'>&amp;</abbr> fun experience for everyone, so I help local businesses establish a crisp, clean, and mobile-friendly online presence. My design&nbsp;<abbr className='amp' title='and'>&amp;</abbr> development journey is fueled by my passion for science, learning, and&nbsp;travel.</p>
+                    <p>Hello, I'm Jon Reimer. I believe browsing the web should be an enjoyable&nbsp;<abbr className='amp' title='and'>&amp;</abbr> fun experience for everyone, so I help local businesses establish a crisp, clean, and mobile-friendly online presence. My design&nbsp;<abbr className='amp' title='and'>&amp;</abbr> development journey is fueled by my passion for science, travel, and problem&nbsp;solving.</p>
                     <div className={style.InfoBlocks}>
                         <InfoBlock title='Working'><p>I am currently searching for a full-time developer&nbsp;position.</p></InfoBlock>
                         <InfoBlock title='Learning'><p>&ldquo;React &ndash; The Complete Guide (incl. Hooks, React Router,&nbsp;Redux)&rdquo;.</p></InfoBlock>
                         <InfoBlock title='Building'><>
                             <p>A Typescript/React game.</p>
-                            <p>Enhancements for this portfolio&nbsp;website.</p>
                         </></InfoBlock>
                         {readingSection()}
                     </div>
