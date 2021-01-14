@@ -12,11 +12,13 @@ import img2 from '../../../assets/img/screenshots/graphics-2.jpg';
 import img3 from '../../../assets/img/screenshots/graphics-3.jpg';
 import img4 from '../../../assets/img/screenshots/graphics-4.jpg';
 import img5 from '../../../assets/img/screenshots/graphics-5.jpg';
+import img6 from '../../../assets/img/screenshots/graphics-6.jpg';
 import thumb1 from '../../../assets/img/screenshots/graphics-1-th.jpg';
 import thumb2 from '../../../assets/img/screenshots/graphics-2-th.jpg';
 import thumb3 from '../../../assets/img/screenshots/graphics-3-th.jpg';
 import thumb4 from '../../../assets/img/screenshots/graphics-4-th.jpg';
 import thumb5 from '../../../assets/img/screenshots/graphics-5-th.jpg';
+import thumb6 from '../../../assets/img/screenshots/graphics-6-th.jpg';
 
 type GraphicsProps = PortfolioPage & ConnectedProps<typeof connector>;
 
@@ -40,8 +42,8 @@ const graphics: React.FC<GraphicsProps> = ( props ) => {
             </SectionBlock>
             <LinkBlock links={props.links} />
             <LightboxBlock
-                srcs={[ img1, img2, img3, img4, img5 ]}
-                thumb={[ thumb1, thumb2, thumb3, thumb4, thumb5 ]}
+                srcs={[ img1, img2, img3, img4, img5, img6 ]}
+                thumb={[ thumb1, thumb2, thumb3, thumb4, thumb5, thumb6 ]}
                 theRef={screenRef}
             />
         </>
