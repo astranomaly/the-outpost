@@ -5,6 +5,7 @@ import Actions from '../../../store/actions';
 import SectionBlock, {values} from '../../../components/UI/SectionBlock/SectionBlock';
 import LightboxBlock from '../../../components/UI/LightboxBlock/LightboxBlock';
 import LinkBlock from '../../../components/UI/LinkBlock/LinkBlock';
+import And from '../../../components/UI/And/And';
 // Images
 import img1 from '../../../assets/img/screenshots/landman-1.jpg';
 import img2 from '../../../assets/img/screenshots/landman-2.jpg';
@@ -28,11 +29,11 @@ const landman: React.FC<LandmanProps> = ( props ) => {
     return (
         <>
             <SectionBlock theRef={infoRef} title={values.info}>
-                <p>Landman is a locally owned and operated construction company focusing on earthworks such as excavation and landscaping. I was contacted by Landman to design a simple, modern website with a strong focus on images rather than text. Additionally, I was tasked with designing new branding <abbr className='amp' title='and'>&amp;</abbr> business cards for the company to match the design of the&nbsp;website.</p>
+                <p>Landman is a locally owned and operated construction company focusing on earthworks such as excavation and landscaping. I was contacted by Landman to design a simple, modern website with a strong focus on images rather than text. Additionally, I was tasked with designing new branding <And/> business cards for the company to match the design of the&nbsp;website.</p>
             </SectionBlock>
             <SectionBlock theRef={techRef} title={values.tech}>
                 <p>After practicing <a href='https://www.typescriptlang.org/'>TypeScript</a> in my personal projects over the previous months, this website was officially the first commercial project I completed using JavaScript's more strongly-typed&nbsp;descendant.</p>
-                <p>As always, the responsive framework uses <a href='https://sass-lang.com/'>Sass</a> for styling, but no external libraries were used to create the layout this time. Instead, the site is built using CSS3's Flexbox feature with just a few media breakpoints as needed. Automated compiling of Sass <abbr className='amp' title='and'>&amp;</abbr> TypeScript was achieved through <a href='https://gulpjs.com/'>Gulp</a>. Fonts are provided by <a href='https://fonts.google.com/'>Google Fonts</a> and the slideshow uses the <a href='https://flickity.metafizzy.co/'>Flickity</a> slider since it's both mobile-friendly and pure&nbsp;JavaScript.</p>
+                <p>As always, the responsive framework uses <a href='https://sass-lang.com/'>Sass</a> for styling, but no external libraries were used to create the layout this time. Instead, the site is built using CSS3's Flexbox feature with just a few media breakpoints as needed. Automated compiling of Sass <And/> TypeScript was achieved through <a href='https://gulpjs.com/'>Gulp</a>. Fonts are provided by <a href='https://fonts.google.com/'>Google Fonts</a> and the slideshow uses the <a href='https://flickity.metafizzy.co/'>Flickity</a> slider since it's both mobile-friendly and pure&nbsp;JavaScript.</p>
                 <p>All site graphics were done using <a href='https://affinity.serif.com'>Affinity</a> Designer & Photo. The icons and logos were then exported as SVG&nbsp;elements.</p>
             </SectionBlock>
             <LinkBlock links={props.links} />
