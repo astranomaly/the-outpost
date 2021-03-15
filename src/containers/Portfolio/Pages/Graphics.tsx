@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import SectionBlock, {values} from '../../../components/UI/SectionBlock/SectionBlock';
 import LinkBlock from '../../../components/UI/LinkBlock/LinkBlock';
 import LightboxBlock from '../../../components/UI/LightboxBlock/LightboxBlock';
+import And from '../../../components/UI/And/And';
 // Images
 import img1 from '../../../assets/img/screenshots/graphics-1.jpg';
 import img2 from '../../../assets/img/screenshots/graphics-2.jpg';
@@ -33,12 +34,12 @@ const graphics: React.FC<GraphicsProps> = ( props ) => {
     return (
         <>
             <SectionBlock theRef={infoRef} title={values.info}>
-                <p>Graphic design is what lead me down the Web Development path in the first place, and occasionally people ask me to do graphic designs for them (business cards <abbr className='amp' title='and'>&amp;</abbr> logos mostly). Luckily for me, graphic design is closely related to web design and both were part of my college&nbsp;education.</p>
-                <p>Over the past few years I've been contracted by companies of many sizes, from private projects to province-wide customer bases. One recent project was to update ViaFoods' website and packaging, along with shooting their product photography. I also designed and printed mail flyers <abbr className='amp' title='and'>&amp;</abbr> business cards for Reimer Carpentry, and created business cards for&nbsp;<Link to='/p/landman'>Landman</Link>.</p>
+                <p>Graphic design is what lead me down the Web Development path in the first place, and occasionally people ask me to do graphic designs for them (business cards <And/> logos mostly). Luckily for me, graphic design is closely related to web design and both were part of my college&nbsp;education.</p>
+                <p>Over the past few years I've been contracted by companies of many sizes, from private projects to province-wide customer bases. One recent project was to update ViaFoods' website and packaging, along with shooting their product photography. I also designed and printed mail flyers <And/> business cards for Reimer Carpentry, and created business cards for&nbsp;<Link to='/p/landman'>Landman</Link>.</p>
                 <p>Even when I'm not being paid to create, I enjoy designing consistent book/movie/album covers for my media libraries or creating icon sets for my own personal&nbsp;use.</p>
             </SectionBlock>
             <SectionBlock theRef={techRef} title={values.tech}>
-                <p>Initially, I used Adobe Photoshop and/or Illustrator for a great deal of my design work. The <Link to='/p/maxq'>Max Q Live</Link> project required many mockups and photo edits in Adobe Photoshop, while the ViaFoods project exclusively used Adobe Illustrator. Recently, I've moved over to <a href='https://affinity.serif.com'>Affinity</a> Designer <abbr className='amp' title='and'>&amp;</abbr> Photo for all my design&nbsp;work.</p>
+                <p>Initially, I used Adobe Photoshop and/or Illustrator for a great deal of my design work. The <Link to='/p/maxq'>Max Q Live</Link> project required many mockups and photo edits in Adobe Photoshop, while the ViaFoods project exclusively used Adobe Illustrator. Recently, I've moved over to <a href='https://affinity.serif.com'>Affinity</a> Designer <And/> Photo for all my design&nbsp;work.</p>
             </SectionBlock>
             <LinkBlock links={props.links} />
             <LightboxBlock

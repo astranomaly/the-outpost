@@ -17,6 +17,7 @@ import StandoutText from '../../components/UI/StandoutText/StandoutText';
 import Tools from '../../components/Tools/Tools';
 import Social from '../../components/Social/Social';
 import BookInfo from '../../components/BookInfo/BookInfo';
+import And from '../../components/UI/And/And';
 
 type HomeProps = RouteComponentProps & ConnectedProps<typeof connector>;
 type HomeState = {
@@ -109,22 +110,24 @@ class Home extends Component<HomeProps,HomeState>{
                 <Header />
                 <section ref={this._aboutRef} className={style.About}>
                     <h2>Now</h2>
-                    <p>Hello, I'm Jon Reimer. I believe browsing the web should be an enjoyable&nbsp;<abbr className='amp' title='and'>&amp;</abbr> fun experience for everyone, so I help local businesses establish a crisp, clean, and mobile-friendly online presence. My design&nbsp;<abbr className='amp' title='and'>&amp;</abbr> development journey is fueled by my passion for science, travel, and problem&nbsp;solving.</p>
+                    <p>Hello, I'm Jon Reimer. I believe browsing the web should be an enjoyable&nbsp;<And/> fun experience for everyone, so I help local businesses establish a crisp, clean, and mobile-friendly online presence. My design&nbsp;<And/> development journey is fueled by my passion for science, travel, and problem&nbsp;solving.</p>
                     <div className={style.InfoBlocks}>
-                        <InfoBlock title='Working'><p>I am currently searching for a full-time developer&nbsp;position.</p></InfoBlock>
+                        <InfoBlock title='Working'><>
+                            <p>Developing my own side-business.</p>
+                            <p>Currently searching for a full-time developer&nbsp;position.</p>
+                        </></InfoBlock>
                         <InfoBlock title='Learning'><>
                         <p>&ldquo;React &ndash; The Complete Guide (incl. Hooks, React Router,&nbsp;Redux)&rdquo;.</p>
-                        <p>Gatsby <abbr className='amp' title='and'>&amp;</abbr> Tailwind CSS</p>
+                        <p>Next.js <And/> Tailwind CSS.</p>
                         </></InfoBlock>
                         <InfoBlock title='Building'><>
-                            <p>A Typescript/React game.</p>
-                            <p>My own business.</p>
+                            <p>A TypeScript/React game.</p>
                         </></InfoBlock>
                         {readingSection()}
                     </div>
                 </section>
                 <main ref={this._portfolioRef} className={style.Portfolio}>
-                    <h2><abbr className='amp' title='and'>&amp;</abbr> Then</h2>
+                    <h2><And/> Then</h2>
                     <h3>Portfolio</h3>
                     <div className={style.CardContainer}>
                         <Card title="Landman"
@@ -156,7 +159,7 @@ class Home extends Component<HomeProps,HomeState>{
                     <Tools />
                 </main>
                 <section ref={this._contactRef} className={style.Contact}>
-                    <h2><abbr className='amp' title='and'>&amp;</abbr> Later</h2>
+                    <h2><And/> Later</h2>
                     <p>Whether you're looking for a new/updated website or for someone to collaborate with, my inbox is <span className='no-break'>always open.</span></p>
                     <div className={style.ContactContainer}>
                         <StandoutText>
